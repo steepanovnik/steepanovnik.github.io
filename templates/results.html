@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Výsledky hledání</title>
+</head>
+
+<body>
+    <h1>Výsledky hledání</h1>
+    <p>Váš dotaz: {{ query }}</p>
+
+    <h2>Výsledky:</h2>
+    <ul>
+        {% for result in results %}
+        <li><a href="{{ result }}">{{ result }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/download_csv">
+        <button>Stáhnout CSV soubor</button>
+    </a>
+    <a href="/download_json">
+        <button>Stáhnout JSON soubor</button>
+    </a>
+</body>
+
+</html>
